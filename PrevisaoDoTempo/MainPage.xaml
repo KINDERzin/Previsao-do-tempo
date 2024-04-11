@@ -1,0 +1,217 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PrevisaoDoTempo.MainPage"
+             Shell.NavBarIsVisible="False">
+    
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="120"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+<!--=======================================================================================-->
+
+            <Image Source="tela_de_fundo.jpeg"
+                   Aspect="AspectFill"
+                   Grid.RowSpan="3"/>
+
+<!--=======================================================================================-->
+
+            <VerticalStackLayout Grid.Row="1">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Frame x:Name="um"
+                           BackgroundColor="#77ffffff"
+                           Grid.Row="0"
+                           Grid.Column="0"
+                           Grid.RowSpan="2"
+                           CornerRadius="35"
+                           Margin="5, 0">
+
+                        <VerticalStackLayout>
+                            <Label Text="23"
+                                    x:Name="LabelTemperatura"
+                                    />
+
+                            <Label Text="Tempo nublado"
+                                   x:Name="LabelComoOTempoEsta"
+                                   />
+
+                            <Label Text="Apucarana, PR"
+                                   x:Name="LabelCidade"
+                                   />
+                        </VerticalStackLayout>
+                    
+                    </Frame>
+
+
+                    <Frame x:Name="dois"
+                           BackgroundColor="#77ffffff"
+                           Grid.Row="0"
+                           Grid.Column="1">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Label Text="Chuva:"
+                                    x:Name="LabelTempo"
+                                    Grid.Row="0"
+                                    Grid.Column="0"/>
+                            
+                            <Label Text="88"
+                                   x:Name="LabelRespostaTempo"
+                                   Grid.Row="0"
+                                   Grid.Column="1"/> 
+
+                            <Label Text="Humidade"
+                                   x:Name="ComoOTempoEsta"
+                                   Grid.Row="1"
+                                   Grid.Column="0"/>
+
+                            <Label Text="88"
+                                   x:Name="LabelRepostaComoOTempoEsta"
+                                   Grid.Row="1"
+                                   Grid.Column="1"/>
+                        </Grid>
+                    </Frame>
+
+
+                    <Frame x:Name="tres"
+                           BackgroundColor="#77ffffff"
+                           Grid.Row="1"
+                           Grid.Column="1">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Label Text="Sol"
+                                   Grid.Row="0"
+                                   Grid.Column="0"
+                                   Grid.RowSpan="2"/>
+                            
+                            <Label Text="Amanhecer:"
+                                   Grid.Row="1"
+                                   Grid.Column="0"/> 
+
+                            <Label Text="06:01"
+                                   Grid.Row="1"
+                                   Grid.Column="1"/>
+
+                            <Label Text="Anoitecer:"
+                                   Grid.Row="2"
+                                   Grid.Column="0"/>
+
+                            <Label Text="18:02"
+                                   Grid.Row="2"
+                                   Grid.Column="1"/>
+                        </Grid>
+                    </Frame>
+
+
+                    <Frame x:Name="quatro"
+                           BackgroundColor="#77ffffff"
+                           Grid.Row="0"
+                           Grid.Column="2">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Label Text="Vento"
+                                   Grid.Row="0"
+                                   Grid.Column="0"
+                                   Grid.ColumnSpan="2"/>
+                            
+                            <Label Text="Força:"
+                                   Grid.Row="1"
+                                   Grid.Column="0"/> 
+
+                            <Label Text="3"
+                                   Grid.Row="1"
+                                   Grid.Column="1"/>
+
+                            <Label Text="Direção:"
+                                   Grid.Row="2"
+                                   Grid.Column="0"/>
+
+                            <Label Text="397 N"
+                                   Grid.Row="2"
+                                   Grid.Column="1"/>
+                        </Grid>
+                    </Frame>
+    
+
+                    <Frame x:Name="cinco"
+                           BackgroundColor="#77ffffff"
+                           Grid.Row="1"
+                           Grid.Column="2">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            
+                            <Label Text="Lua"
+                                   Grid.Row="0"
+                                   Grid.Column="0"
+                                   Grid.ColumnSpan="2"/>
+                            
+                            <Label Text="Fase:"
+                                   Grid.Row="1"
+                                   Grid.Column="0"/> 
+
+                            <Label Text="Nova"
+                                   Grid.Row="1"
+                                   Grid.Column="1"/>
+
+                        </Grid>
+                    </Frame>                    
+
+                </Grid>
+
+            </VerticalStackLayout>
+
+            <Frame Grid.Row="2"
+                   BackgroundColor="#77ffffff"
+                   Margin="5">
+                
+            </Frame>
+
+        </Grid>
+    
+
+</ContentPage>
