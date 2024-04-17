@@ -4,245 +4,258 @@
              x:Class="PrevisaoDoTempo.MainPage"
              Shell.NavBarIsVisible="False">
     
-        <Grid>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-            </Grid.RowDefinitions>
+       <Grid>
+              <Grid.RowDefinitions>
+                     <RowDefinition Height="*"/>
+                     <RowDefinition Height="100"/>
+                     <RowDefinition Height="100"/>
+                     <RowDefinition Height="*"/>
+              </Grid.RowDefinitions>
+              <Grid.ColumnDefinitions>
+                     <ColumnDefinition Width="160"/>
+                     <ColumnDefinition Width="160"/>
+                     <ColumnDefinition Width="160"/>
+              </Grid.ColumnDefinitions>
 
-<!--=======================================================================================-->
 
-            <Image Source="tela_de_fundo.jpeg"
-                   Aspect="AspectFill"
-                   Grid.RowSpan="3"/>
+              <Image Source="dia_chuvoso.png"
+                     Aspect="AspectFill"
+                     Grid.RowSpan="4"
+                     Grid.ColumnSpan="3"/>
+            
 
-<!--=======================================================================================-->
-
-            <VerticalStackLayout Grid.Row="1">
-                <Grid>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="*"/>
-                        <RowDefinition Height="*"/>
-                    </Grid.RowDefinitions>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="*"/>
-                    </Grid.ColumnDefinitions>
-
-                    <Frame x:Name="um"
+                     <Frame x:Name="um"
                            BackgroundColor="#77ffffff"
                            BorderColor="Transparent"
-                           Grid.Row="0"
+                           Grid.Row="1"
                            Grid.Column="0"
                            Grid.RowSpan="2"
                            CornerRadius="35"
                            Margin="5, 0">
 
-                        <VerticalStackLayout>
-                            <Label Text="23"
-                                   TextColor="Black"
-                                   x:Name="LabelTemperatura"/>
+                            <VerticalStackLayout>
 
-                            <Label Text="Tempo nublado"
-                                   TextColor="Black"
-                                   x:Name="LabelComoOTempoEsta"
-                                   />
+                                   <Label Text="23 ºC"
+                                          TextColor="Black"
+                                          FontSize="40"
+                                          x:Name="LabelTemperatura"
+                                          Margin="5,20"/>
 
-                            <Label Text="Apucarana, PR"
-                                   TextColor="Black"
-                                   x:Name="LabelCidade"
-                                   />
-                        </VerticalStackLayout>
+                                   <Label Text="Tempo nublado"
+                                          TextColor="Black"
+                                          FontSize="13"
+                                          Margin="5"
+                                          x:Name="LabelComoOTempoEsta"/>
+
+                                   <Label Text="Apucarana, PR"
+                                          TextColor="Black"
+                                          Margin="5,10"
+                                          x:Name="LabelCidade"/>
+
+                            </VerticalStackLayout>
                     
-                    </Frame>
+                     </Frame>
 
 
-                    <Frame x:Name="dois"
-                           BackgroundColor="#77ffffff"
-                           BorderColor="Transparent"
-                           CornerRadius="35"
-                           Grid.Row="0"
-                           Grid.Column="1">
-                        <Grid>
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="*"/>
-                                <RowDefinition Height="*"/>
-                            </Grid.RowDefinitions>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="*"/>
-                                <ColumnDefinition Width="20"/>
-                            </Grid.ColumnDefinitions>
-
-                            <Label Text="Chuva:"
-                                   TextColor="Black"
-                                   x:Name="LabelTempo"
-                                   Grid.Row="0"
-                                   Grid.Column="0"/>
-                            
-                            <Label Text="88"
-                                   TextColor="Black"
-                                   x:Name="LabelRespostaTempo"
-                                   Grid.Row="0"
-                                   Grid.Column="1"/> 
-
-                            <Label Text="Humidade:"
-                                   TextColor="Black"
-                                   x:Name="ComoOTempoEsta"
-                                   Grid.Row="1"
-                                   Grid.Column="0"/>
-
-                            <Label Text="88"
-                                   TextColor="Black"
-                                   x:Name="LabelRepostaComoOTempoEsta"
-                                   Grid.Row="1"
-                                   Grid.Column="1"/>
-                        </Grid>
-                    </Frame>
-
-
-                    <Frame x:Name="tres"
+                     <Frame x:Name="dois"
                            BackgroundColor="#77ffffff"
                            BorderColor="Transparent"
                            CornerRadius="35"
                            Grid.Row="1"
                            Grid.Column="1">
-                        <Grid>
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="*"/>
-                                <RowDefinition Height="*"/>
-                                <RowDefinition Height="*"/>
-                            </Grid.RowDefinitions>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="*"/>
-                                <ColumnDefinition Width="45"/>
-                            </Grid.ColumnDefinitions>
+                            <Grid>
+                                   <Grid.RowDefinitions>
+                                   <RowDefinition Height="*"/>
+                                   <RowDefinition Height="*"/>
+                                   </Grid.RowDefinitions>
+                                   <Grid.ColumnDefinitions>
+                                   <ColumnDefinition Width="*"/>
+                                   <ColumnDefinition Width="20"/>
+                                   </Grid.ColumnDefinitions>
 
-                            <Label Text="Sol"
-                                   TextColor="Black"
-                                   HorizontalTextAlignment="Center"
-                                   Grid.Row="0"
-                                   Grid.Column="0"
-                                   Grid.RowSpan="2"/>
-                            
-                            <Label Text="Amanhecer:"
-                                   TextColor="Black"
-                                   Grid.Row="1"
-                                   Grid.Column="0"/> 
+                                   <Label Text="Chuva:"
+                                          TextColor="Black"
+                                          FontSize="14"
+                                          x:Name="LabelTempo"
+                                          Grid.Row="0"
+                                          Grid.Column="0"/>
+                                   
+                                   <Label Text="88"
+                                          TextColor="Black"
+                                          FontSize="14"
+                                          x:Name="LabelRespostaTempo"
+                                          Grid.Row="0"
+                                          Grid.Column="1"/> 
 
-                            <Label Text="06:01"
-                                   TextColor="Black"
-                                   Grid.Row="1"
-                                   Grid.Column="1"/>
+                                   <Label Text="Humidade:"
+                                          TextColor="Black"
+                                          FontSize="14"
+                                          x:Name="ComoOTempoEsta"
+                                          Grid.Row="1"
+                                          Grid.Column="0"/>
 
-                            <Label Text="Anoitecer:"
-                                   TextColor="Black"
-                                   Grid.Row="2"
-                                   Grid.Column="0"/>
-
-                            <Label Text="18:02"
-                                   TextColor="Black"
-                                   Grid.Row="2"
-                                   Grid.Column="1"/>
-                        </Grid>
-                    </Frame>
+                                   <Label Text="88"
+                                          TextColor="Black"
+                                          FontSize="14"
+                                          x:Name="LabelRepostaComoOTempoEsta"
+                                          Grid.Row="1"
+                                          Grid.Column="1"/>
+                            </Grid>
+                     </Frame>
 
 
-                    <Frame x:Name="quatro"
+                     <Frame x:Name="tres"
                            BackgroundColor="#77ffffff"
                            BorderColor="Transparent"
                            CornerRadius="35"
-                           Grid.Row="0"
+                           Grid.Row="2"
+                           Grid.Column="1">
+                            <Grid>
+                                   <Grid.RowDefinitions>
+                                   <RowDefinition Height="20"/>
+                                   <RowDefinition Height="*"/>
+                                   <RowDefinition Height="*"/>
+                                   </Grid.RowDefinitions>
+                                   <Grid.ColumnDefinitions>
+                                   <ColumnDefinition Width="81"/>
+                                   <ColumnDefinition Width="45"/>
+                                   </Grid.ColumnDefinitions>
+
+                                   <Label Text="Sol"
+                                          TextColor="Black"
+                                          FontSize="18"
+                                          HorizontalTextAlignment="Center"
+                                          Grid.Row="0"
+                                          Grid.Column="0"
+                                          Grid.ColumnSpan="2"/>
+                                   
+                                   <Label Text="Amanhecer:"
+                                          TextColor="Black"
+                                          FontSize="14"
+                                          Grid.Row="1"
+                                          Grid.Column="0"/> 
+
+                                   <Label Text="06:01"
+                                          TextColor="Black"
+                                          FontSize="14"
+                                          Grid.Row="1"
+                                          Grid.Column="1"/>
+
+                                   <Label Text="Anoitecer:"
+                                          TextColor="Black"
+                                          FontSize="14"
+                                          Grid.Row="2"
+                                          Grid.Column="0"/>
+
+                                   <Label Text="18:02"
+                                          TextColor="Black"
+                                          FontSize="14"
+                                          Grid.Row="2"
+                                          Grid.Column="1"/>
+                            </Grid>
+                     </Frame>
+
+
+                     <Frame x:Name="quatro"
+                           BackgroundColor="#77ffffff"
+                           BorderColor="Transparent"
+                           CornerRadius="35"
+                           Grid.Row="1"
                            Grid.Column="2">
-                        <Grid>
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="*"/>
-                                <RowDefinition Height="*"/>
-                                <RowDefinition Height="*"/>
-                            </Grid.RowDefinitions>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="*"/>
-                                <ColumnDefinition Width="20"/>
-                            </Grid.ColumnDefinitions>
+                            <Grid>
+                                   <Grid.RowDefinitions>
+                                   <RowDefinition Height="*"/>
+                                   <RowDefinition Height="*"/>
+                                   <RowDefinition Height="*"/>
+                                   </Grid.RowDefinitions>
+                                   <Grid.ColumnDefinitions>
+                                   <ColumnDefinition Width="60"/>
+                                   <ColumnDefinition Width="30"/>
+                                   </Grid.ColumnDefinitions>
 
-                            <Label Text="Vento"
-                                   TextColor="Black"
-                                   HorizontalTextAlignment="Center"
-                                   Grid.Row="0"
-                                   Grid.Column="0"
-                                   Grid.ColumnSpan="2"/>
-                            
-                            <Label Text="Força:"
-                                   TextColor="Black"
-                                   Grid.Row="1"
-                                   Grid.Column="0"/> 
+                                   <Label Text="Vento"
+                                          TextColor="Black"
+                                          HorizontalTextAlignment="Center"
+                                          Grid.Row="0"
+                                          Grid.Column="0"
+                                          Grid.ColumnSpan="2"/>
+                                   
+                                   <Label Text="Força:"
+                                          TextColor="Black"
+                                          FontSize="14"
+                                          Grid.Row="1"
+                                          Grid.Column="0"/> 
 
-                            <Label Text="3"
-                                   Grid.Row="1"
-                                   Grid.Column="1"/>
+                                   <Label Text="3"
+                                          TextColor="Black"
+                                          FontSize="14"
+                                          Grid.Row="1"
+                                          Grid.Column="1"/>
 
-                            <Label Text="Direção:"
-                                   TextColor="Black"
-                                   Grid.Row="2"
-                                   Grid.Column="0"/>
+                                   <Label Text="Direção:"
+                                          TextColor="Black"
+                                          FontSize="14"
+                                          Grid.Row="2"
+                                          Grid.Column="0"/>
 
-                            <Label Text="397 N"
-                                   TextColor="Black"
-                                   Grid.Row="2"
-                                   Grid.Column="1"/>
-                        </Grid>
-                    </Frame>
+                                   <Label Text="397 N"
+                                          TextColor="Black"
+                                          FontSize="14"
+                                          Grid.Row="2"
+                                          Grid.Column="1"/>
+                            </Grid>
+                     </Frame>
     
 
-                    <Frame x:Name="cinco"
+                     <Frame x:Name="cinco"
                            BackgroundColor="#77ffffff"
                            BorderColor="Transparent"
                            CornerRadius="35"
-                           Grid.Row="1"
+                           Grid.Row="2"
                            Grid.Column="2">
-                        <Grid>
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="*"/>
-                                <RowDefinition Height="*"/>
-                            </Grid.RowDefinitions>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="*"/>
-                                <ColumnDefinition Width="20"/>
-                            </Grid.ColumnDefinitions>
-                            
-                            <Label Text="Lua"
-                                   TextColor="Black"
-                                   HorizontalTextAlignment="Center"     
-                                   Grid.Row="0"
-                                   Grid.Column="0"
-                                   Grid.ColumnSpan="2"/>
-                            
-                            <Label Text="Fase:"
-                                   TextColor="Black"
-                                   Grid.Row="1"
-                                   Grid.Column="0"/> 
+                            <Grid>
+                                   <Grid.RowDefinitions>
+                                   <RowDefinition Height="*"/>
+                                   <RowDefinition Height="*"/>
+                                   </Grid.RowDefinitions>
+                                   <Grid.ColumnDefinitions>
+                                   <ColumnDefinition Width="*"/>
+                                   <ColumnDefinition Width="40"/>
+                                   </Grid.ColumnDefinitions>
+                                   
+                                   <Label Text="Lua"
+                                          TextColor="Black"
+                                          HorizontalTextAlignment="Center"     
+                                          Grid.Row="0"
+                                          Grid.Column="0"
+                                          Grid.ColumnSpan="2"/>
+                                   
+                                   <Label Text="Fase:"
+                                          TextColor="Black"
+                                          FontSize="14"
+                                          Grid.Row="1"
+                                          Grid.Column="0"/> 
 
-                            <Label Text="Nova"
-                                   TextColor="Black"
-                                   Grid.Row="1"
-                                   Grid.Column="1"/>
+                                   <Label Text="Nova"
+                                          TextColor="Black"
+                                          FontSize="14"
+                                          Grid.Row="1"
+                                          Grid.Column="1"/>
 
-                        </Grid>
-                    </Frame>                    
+                            </Grid>
+                     </Frame>
+            
 
-                </Grid>
-
-            </VerticalStackLayout>
-
-            <Frame Grid.Row="2"
+              <Frame Grid.Row="3"
+                   Grid.Column="0"
+                   Grid.ColumnSpan="3"
                    BackgroundColor="#77ffffff"
                    BorderColor="Transparent"
                    Margin="5">
                 
-            </Frame>
+              </Frame>
 
-        </Grid>
+       </Grid>
     
 
 </ContentPage>
