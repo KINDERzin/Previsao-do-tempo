@@ -18,11 +18,12 @@
               </Grid.ColumnDefinitions>
 
 
-              <Image Source="dia_chuvoso.png"
+              <Image x:Name="TelaDeFundo"
                      Aspect="AspectFill"
                      Grid.RowSpan="4"
                      Grid.ColumnSpan="3"/>
             
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 
                      <Frame x:Name="um"
                            BackgroundColor="#77ffffff"
@@ -35,17 +36,15 @@
 
                             <VerticalStackLayout>
 
-                                   <Label Text="23 ºC"
-                                          TextColor="Black"
-                                          FontSize="40"
+                                   <Label TextColor="Black"
                                           x:Name="LabelTemperatura"
+                                          FontSize="40"
                                           Margin="5,20"/>
 
-                                   <Label Text="Tempo nublado"
-                                          TextColor="Black"
+                                   <Label TextColor="Black"
+                                          x:Name="LabelTempo"
                                           FontSize="13"
-                                          Margin="5"
-                                          x:Name="LabelComoOTempoEsta"/>
+                                          Margin="5"/>
 
                                    <Label Text="Apucarana, PR"
                                           TextColor="Black"
@@ -56,6 +55,7 @@
                     
                      </Frame>
 
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 
                      <Frame x:Name="dois"
                            BackgroundColor="#77ffffff"
@@ -76,33 +76,30 @@
                                    <Label Text="Chuva:"
                                           TextColor="Black"
                                           FontSize="14"
-                                          x:Name="LabelTempo"
                                           Grid.Row="0"
                                           Grid.Column="0"/>
                                    
-                                   <Label Text="88"
-                                          TextColor="Black"
+                                   <Label TextColor="Black"
                                           FontSize="14"
-                                          x:Name="LabelRespostaTempo"
+                                          x:Name="LabelChuva"
                                           Grid.Row="0"
                                           Grid.Column="1"/> 
 
                                    <Label Text="Humidade:"
                                           TextColor="Black"
                                           FontSize="14"
-                                          x:Name="ComoOTempoEsta"
                                           Grid.Row="1"
                                           Grid.Column="0"/>
 
-                                   <Label Text="88"
-                                          TextColor="Black"
+                                   <Label TextColor="Black"
                                           FontSize="14"
-                                          x:Name="LabelRepostaComoOTempoEsta"
+                                          x:Name="LabelHumidade"
                                           Grid.Row="1"
                                           Grid.Column="1"/>
                             </Grid>
                      </Frame>
 
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 
                      <Frame x:Name="tres"
                            BackgroundColor="#77ffffff"
@@ -135,8 +132,8 @@
                                           Grid.Row="1"
                                           Grid.Column="0"/> 
 
-                                   <Label Text="06:01"
-                                          TextColor="Black"
+                                   <Label TextColor="Black"
+                                          x:Name="LabelAmanhecer"
                                           FontSize="14"
                                           Grid.Row="1"
                                           Grid.Column="1"/>
@@ -147,14 +144,15 @@
                                           Grid.Row="2"
                                           Grid.Column="0"/>
 
-                                   <Label Text="18:02"
-                                          TextColor="Black"
+                                   <Label TextColor="Black"
+                                          x:Name="LabelAnoitecer"
                                           FontSize="14"
                                           Grid.Row="2"
                                           Grid.Column="1"/>
                             </Grid>
                      </Frame>
 
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 
                      <Frame x:Name="quatro"
                            BackgroundColor="#77ffffff"
@@ -186,8 +184,8 @@
                                           Grid.Row="1"
                                           Grid.Column="0"/> 
 
-                                   <Label Text="3"
-                                          TextColor="Black"
+                                   <Label TextColor="Black"
+                                          x:Name="LabelForca"
                                           FontSize="14"
                                           Grid.Row="1"
                                           Grid.Column="1"/>
@@ -198,14 +196,15 @@
                                           Grid.Row="2"
                                           Grid.Column="0"/>
 
-                                   <Label Text="397 N"
-                                          TextColor="Black"
+                                   <Label TextColor="Black"
+                                          x:Name="LabelDirecao"
                                           FontSize="14"
                                           Grid.Row="2"
                                           Grid.Column="1"/>
                             </Grid>
                      </Frame>
     
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 
                      <Frame x:Name="cinco"
                            BackgroundColor="#77ffffff"
@@ -220,7 +219,7 @@
                                    </Grid.RowDefinitions>
                                    <Grid.ColumnDefinitions>
                                    <ColumnDefinition Width="*"/>
-                                   <ColumnDefinition Width="40"/>
+                                   <ColumnDefinition Width="80"/>
                                    </Grid.ColumnDefinitions>
                                    
                                    <Label Text="Lua"
@@ -236,15 +235,16 @@
                                           Grid.Row="1"
                                           Grid.Column="0"/> 
 
-                                   <Label Text="Nova"
-                                          TextColor="Black"
+                                   <Label TextColor="Black"
+                                          x:Name="LabelFase"
                                           FontSize="14"
                                           Grid.Row="1"
                                           Grid.Column="1"/>
 
                             </Grid>
                      </Frame>
-            
+
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 
               <Frame Grid.Row="3"
                    Grid.Column="0"
