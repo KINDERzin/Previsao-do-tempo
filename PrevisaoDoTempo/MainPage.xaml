@@ -12,9 +12,9 @@
                      <RowDefinition Height="*"/>
               </Grid.RowDefinitions>
               <Grid.ColumnDefinitions>
-                     <ColumnDefinition Width="160"/>
-                     <ColumnDefinition Width="160"/>
-                     <ColumnDefinition Width="160"/>
+                     <ColumnDefinition Width="*"/>
+                     <ColumnDefinition Width="*"/>
+                     <ColumnDefinition Width="*"/>
               </Grid.ColumnDefinitions>
 
 
@@ -26,30 +26,37 @@
 <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 
                      <Frame x:Name="um"
-                           BackgroundColor="#77ffffff"
+                           BackgroundColor="#77ffe7c2"
                            BorderColor="Transparent"
                            Grid.Row="1"
                            Grid.Column="0"
                            Grid.RowSpan="2"
                            CornerRadius="35"
-                           Margin="5, 0">
+                           Margin="5, 0"
+                           Padding="0">
 
                             <VerticalStackLayout>
 
                                    <Label TextColor="Black"
+                                          FontFamily="Chatlong.ttf"
                                           x:Name="LabelTemperatura"
-                                          FontSize="40"
-                                          Margin="5,20"/>
+                                          FontSize="45"
+                                          Margin="5,20"
+                                          HorizontalTextAlignment="Center"/>
 
                                    <Label TextColor="Black"
                                           x:Name="LabelTempo"
+                                          FontFamily="Chatlong.ttf"
                                           FontSize="13"
-                                          Margin="5"/>
+                                          Margin="5"
+                                          HorizontalTextAlignment="Center"/>
 
                                    <Label Text="Apucarana, PR"
+                                          FontFamily="Chatlong.ttf"
                                           TextColor="Black"
                                           Margin="5,10"
-                                          x:Name="LabelCidade"/>
+                                          x:Name="LabelCidade"
+                                          HorizontalTextAlignment="Center"/>
 
                             </VerticalStackLayout>
                     
@@ -58,11 +65,12 @@
 <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 
                      <Frame x:Name="dois"
-                           BackgroundColor="#77ffffff"
+                           BackgroundColor="#77ffe7c2"
                            BorderColor="Transparent"
                            CornerRadius="35"
                            Grid.Row="1"
-                           Grid.Column="1">
+                           Grid.Column="1"
+                           Padding="0">
                             <Grid>
                                    <Grid.RowDefinitions>
                                    <RowDefinition Height="*"/>
@@ -70,43 +78,52 @@
                                    </Grid.RowDefinitions>
                                    <Grid.ColumnDefinitions>
                                    <ColumnDefinition Width="*"/>
-                                   <ColumnDefinition Width="20"/>
+                                   <ColumnDefinition Width="50"/>
                                    </Grid.ColumnDefinitions>
 
                                    <Label Text="Chuva:"
                                           TextColor="Black"
+                                          FontFamily="Chatlong.ttf"
                                           FontSize="14"
                                           Grid.Row="0"
-                                          Grid.Column="0"/>
+                                          Grid.Column="0"
+                                          Margin="15"/>
                                    
                                    <Label TextColor="Black"
                                           FontSize="14"
+                                          FontFamily="Chatlong.ttf"
                                           x:Name="LabelChuva"
                                           Grid.Row="0"
-                                          Grid.Column="1"/> 
+                                          Grid.Column="1"
+                                          Margin="15"/> 
 
                                    <Label Text="Humidade:"
                                           TextColor="Black"
+                                          FontFamily="Chatlong.ttf"
                                           FontSize="14"
                                           Grid.Row="1"
-                                          Grid.Column="0"/>
+                                          Grid.Column="0"
+                                          Margin="15, 5"/>
 
                                    <Label TextColor="Black"
                                           FontSize="14"
+                                          FontFamily="Chatlong.ttf"
                                           x:Name="LabelHumidade"
                                           Grid.Row="1"
-                                          Grid.Column="1"/>
+                                          Grid.Column="1"
+                                          Margin="15, 5"/>
                             </Grid>
                      </Frame>
 
 <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 
                      <Frame x:Name="tres"
-                           BackgroundColor="#77ffffff"
+                           BackgroundColor="#77ffe7c2"
                            BorderColor="Transparent"
                            CornerRadius="35"
                            Grid.Row="2"
-                           Grid.Column="1">
+                           Grid.Column="1"
+                           Padding="0">
                             <Grid>
                                    <Grid.RowDefinitions>
                                    <RowDefinition Height="20"/>
@@ -114,13 +131,14 @@
                                    <RowDefinition Height="*"/>
                                    </Grid.RowDefinitions>
                                    <Grid.ColumnDefinitions>
-                                   <ColumnDefinition Width="81"/>
-                                   <ColumnDefinition Width="45"/>
+                                   <ColumnDefinition Width="100"/>
+                                   <ColumnDefinition Width="55"/>
                                    </Grid.ColumnDefinitions>
 
                                    <Label Text="Sol"
                                           TextColor="Black"
-                                          FontSize="18"
+                                          FontFamily="Bond-story.ttf"
+                                          FontSize="19"
                                           HorizontalTextAlignment="Center"
                                           Grid.Row="0"
                                           Grid.Column="0"
@@ -128,38 +146,47 @@
                                    
                                    <Label Text="Amanhecer:"
                                           TextColor="Black"
+                                          FontFamily="Chatlong.ttf"
                                           FontSize="14"
                                           Grid.Row="1"
-                                          Grid.Column="0"/> 
+                                          Grid.Column="0"
+                                          Margin="10, 5"/> 
 
                                    <Label TextColor="Black"
                                           x:Name="LabelAmanhecer"
+                                          FontFamily="Chatlong.ttf"
                                           FontSize="14"
                                           Grid.Row="1"
-                                          Grid.Column="1"/>
+                                          Grid.Column="1"
+                                          Margin="10, 5"/>
 
                                    <Label Text="Anoitecer:"
                                           TextColor="Black"
+                                          FontFamily="Chatlong.ttf"
                                           FontSize="14"
                                           Grid.Row="2"
-                                          Grid.Column="0"/>
+                                          Grid.Column="0"
+                                          Margin="10, 5"/>
 
                                    <Label TextColor="Black"
                                           x:Name="LabelAnoitecer"
+                                          FontFamily="Chatlong.ttf"
                                           FontSize="14"
                                           Grid.Row="2"
-                                          Grid.Column="1"/>
+                                          Grid.Column="1"
+                                          Margin="10, 5"/>
                             </Grid>
                      </Frame>
 
 <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 
                      <Frame x:Name="quatro"
-                           BackgroundColor="#77ffffff"
+                           BackgroundColor="#77ffe7c2"
                            BorderColor="Transparent"
                            CornerRadius="35"
                            Grid.Row="1"
-                           Grid.Column="2">
+                           Grid.Column="2"
+                           Padding="0">
                             <Grid>
                                    <Grid.RowDefinitions>
                                    <RowDefinition Height="*"/>
@@ -167,12 +194,15 @@
                                    <RowDefinition Height="*"/>
                                    </Grid.RowDefinitions>
                                    <Grid.ColumnDefinitions>
-                                   <ColumnDefinition Width="60"/>
-                                   <ColumnDefinition Width="30"/>
+                                   <ColumnDefinition Width="100"/>
+                                   <ColumnDefinition Width="50"/>
                                    </Grid.ColumnDefinitions>
 
                                    <Label Text="Vento"
                                           TextColor="Black"
+                                          FontFamily="Bond-story.ttf"
+                                          FontSize="19"
+                                          Margin="15, 5"
                                           HorizontalTextAlignment="Center"
                                           Grid.Row="0"
                                           Grid.Column="0"
@@ -180,25 +210,33 @@
                                    
                                    <Label Text="Força:"
                                           TextColor="Black"
+                                          FontFamily="Chatlong.ttf"
                                           FontSize="14"
+                                          Margin="15, 5"
                                           Grid.Row="1"
                                           Grid.Column="0"/> 
 
                                    <Label TextColor="Black"
                                           x:Name="LabelForca"
                                           FontSize="14"
+                                          FontFamily="Chatlong.ttf"
+                                          Margin="15, 5"
                                           Grid.Row="1"
                                           Grid.Column="1"/>
 
                                    <Label Text="Direção:"
                                           TextColor="Black"
                                           FontSize="14"
+                                          FontFamily="Chatlong.ttf"
+                                          Margin="15, 5"
                                           Grid.Row="2"
                                           Grid.Column="0"/>
 
                                    <Label TextColor="Black"
                                           x:Name="LabelDirecao"
+                                          FontFamily="Chatlong.ttf"
                                           FontSize="14"
+                                          Margin="15, 5"
                                           Grid.Row="2"
                                           Grid.Column="1"/>
                             </Grid>
@@ -207,55 +245,51 @@
 <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 
                      <Frame x:Name="cinco"
-                           BackgroundColor="#77ffffff"
+                           BackgroundColor="#77ffe7c2"
                            BorderColor="Transparent"
                            CornerRadius="35"
                            Grid.Row="2"
-                           Grid.Column="2">
+                           Grid.Column="2"
+                           Padding="0">
                             <Grid>
                                    <Grid.RowDefinitions>
                                    <RowDefinition Height="*"/>
                                    <RowDefinition Height="*"/>
                                    </Grid.RowDefinitions>
                                    <Grid.ColumnDefinitions>
-                                   <ColumnDefinition Width="*"/>
-                                   <ColumnDefinition Width="80"/>
+                                   <ColumnDefinition Width="65"/>
+                                   <ColumnDefinition Width="105"/>
                                    </Grid.ColumnDefinitions>
                                    
                                    <Label Text="Lua"
                                           TextColor="Black"
-                                          HorizontalTextAlignment="Center"     
+                                          FontFamily="Bond-story.ttf"
+                                          FontSize="19"
+                                          HorizontalTextAlignment="Center"  
+                                          Padding="15,5"   
                                           Grid.Row="0"
                                           Grid.Column="0"
                                           Grid.ColumnSpan="2"/>
                                    
                                    <Label Text="Fase:"
                                           TextColor="Black"
+                                          FontFamily="Chatlong.ttf"
                                           FontSize="14"
+                                          Margin="15, 5"
                                           Grid.Row="1"
                                           Grid.Column="0"/> 
 
                                    <Label TextColor="Black"
                                           x:Name="LabelFase"
+                                          FontFamily="Chatlong.ttf"
                                           FontSize="14"
+                                          Margin="15, 5"
                                           Grid.Row="1"
                                           Grid.Column="1"/>
 
                             </Grid>
                      </Frame>
 
-<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
-
-              <Frame Grid.Row="3"
-                   Grid.Column="0"
-                   Grid.ColumnSpan="3"
-                   BackgroundColor="#77ffffff"
-                   BorderColor="Transparent"
-                   Margin="5">
-                
-              </Frame>
-
        </Grid>
-    
 
 </ContentPage>

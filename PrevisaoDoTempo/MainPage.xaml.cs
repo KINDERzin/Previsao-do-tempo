@@ -20,7 +20,7 @@ public partial class MainPage : ContentPage
 		resultado = new Results();
 
 		resultado.Temp = 31;
-		resultado.Currently = "Dia";
+		resultado.Currently = "dia";
 		resultado.Description = "Tempo nublado";
 		resultado.Rain = 10;
 		resultado.Humidity = 25;
@@ -54,17 +54,29 @@ public partial class MainPage : ContentPage
 		string WindCardinal = "NE";
 		string MoonPhase = "Minguante";
 
-		if(Rain > 10)
+		if(resultado.Currently == "dia"){
+			if(resultado.Rain > 10)
 			TelaDeFundo.Source = "dia_chuvoso.png";
 		
-		else 
-			TelaDeFundo.Source = "dia_claro.png";
-
-		if(Cloudness > 20)
+		else if(resultado.Cloudness > 20)
 			TelaDeFundo.Source = "dia_nublado.png";
-		
+
 		else
 			TelaDeFundo.Source = "dia_claro.png";
+		}
+		
+		else {
+			
+			if(resultado.Rain > 10)
+			TelaDeFundo.Source = "noite_chuvosa.png";
+		
+			else if(resultado.Cloudness > 20)
+				TelaDeFundo.Source = "noite_nublada.png";
+
+			else
+				TelaDeFundo.Source = "noite_clara.png";
+		}
+		
 	}
 	
 }

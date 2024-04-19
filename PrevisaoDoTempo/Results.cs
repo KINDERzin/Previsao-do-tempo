@@ -10,8 +10,8 @@ public partial class Results
     public int Sunset {get; set;} //Anoitecer
     public int Date {get; set;} // Data
     public int Time {get; set;} // Hora
-    public string Description {get; set;} //
-    public string Currently {get; set;} //
+    public string Description {get; set;} // Descrição do tempo
+    public string Currently {get; set;} // Dia ou Noite
     public string City {get; set;} // Cidade
     public int Humidity {get; set;} // Humidade
     public double Cloudness {get; set;} // Nublado
