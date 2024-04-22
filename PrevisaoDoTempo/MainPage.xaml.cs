@@ -1,11 +1,14 @@
 ﻿
 using System.Diagnostics.Tracing;
+using System.Text.Json;
 
 namespace PrevisaoDoTempo;
 
 public partial class MainPage : ContentPage
 {
 	Results resultado;
+	Results Resposta;
+	const string URL = "https://api.hgbrasil.com/weather?woeid&key=eeb4ae8c";
 	public MainPage()
 	{
 		InitializeComponent();
@@ -13,9 +16,26 @@ public partial class MainPage : ContentPage
 		resultado = new Results();
 
 		TestaLayout();
-		PreencherTela();		
+		PreencherTela();
+		AtualizaTempo();		
 	}
 
+	async void AtualizaTempo(){
+		try{
+			var HttpClient = new HttpClient();
+			var Response = await HttpClient.GetAsync(URL);
+
+			if(Response.IsSuccessStatusCode){
+				var Content = await Response.Content.ReadAsStringAsync();
+				Resposta = JsonSerializer.Deserialize<Results>(Content);
+			}
+		}
+
+		catch(Exception e){
+			//ERRO
+		}
+	}
+	
 	void TestaLayout(){
 		resultado = new Results();
 
@@ -78,6 +98,6 @@ public partial class MainPage : ContentPage
 		}
 		
 	}
-	
+
 }
 
