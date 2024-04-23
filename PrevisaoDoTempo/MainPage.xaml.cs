@@ -6,18 +6,15 @@ namespace PrevisaoDoTempo;
 
 public partial class MainPage : ContentPage
 {
-	Results resultado;
-	Results Resposta;
+	Resposta resposta;
 	const string URL = "https://api.hgbrasil.com/weather?woeid&key=eeb4ae8c";
 	public MainPage()
 	{
 		InitializeComponent();
 	
-		resultado = new Results();
-
-		TestaLayout();
-		PreencherTela();
-		AtualizaTempo();		
+		
+		AtualizaTempo();
+		
 	}
 
 	async void AtualizaTempo(){
@@ -27,58 +24,47 @@ public partial class MainPage : ContentPage
 
 			if(Response.IsSuccessStatusCode){
 				var Content = await Response.Content.ReadAsStringAsync();
-				Resposta = JsonSerializer.Deserialize<Results>(Content);
+				resposta = JsonSerializer.Deserialize<Resposta>(Content);
 			}
 		}
 
 		catch(Exception e){
 			//ERRO
 		}
+
+		PreencherTela();
 	}
 	
-	void TestaLayout(){
-		resultado = new Results();
-
-		resultado.Temp = 31;
-		resultado.Currently = "dia";
-		resultado.Description = "Tempo nublado";
-		resultado.Rain = 10;
-		resultado.Humidity = 25;
-		resultado.Sunrise = 0620;
-		resultado.Cloudness = 10;
-		resultado.Sunset = 1850;
-		resultado.WindSpeedy = 5;
-		resultado.WindCardinal = "NE";
-		resultado.MoonPhase = "Minguante";
-	}
 
 	void PreencherTela(){
-		LabelTemperatura.Text = Convert.ToString(resultado.Temp + "ºC");
-		LabelTempo.Text = resultado.Description;
-		LabelChuva.Text = Convert.ToString(resultado.Rain);
-		LabelHumidade.Text = Convert.ToString(resultado.Humidity);
-		LabelAmanhecer.Text = Convert.ToString(resultado.Sunrise);
-		LabelAnoitecer.Text = Convert.ToString(resultado.Sunset);
-		LabelForca.Text = Convert.ToString(resultado.WindSpeedy);
-		LabelDirecao.Text = resultado.WindCardinal;
-		LabelFase.Text = resultado.MoonPhase;
+		LabelTemperatura.Text = Convert.ToString(resposta.results.temp + "ºC");
+		LabelTempo.Text = resposta.results.description;
+		LabelChuva.Text = Convert.ToString(resposta.results.rain);
+		LabelHumidade.Text = Convert.ToString(resposta.results.humidity);
+		LabelAmanhecer.Text = Convert.ToString(resposta.results.sunrise);
+		LabelAnoitecer.Text = Convert.ToString(resposta.results.sunset);
+		LabelForca.Text = Convert.ToString(resposta.results.wind_speedy);
+		LabelDirecao.Text = resposta.results.wind_cardinal;
+		LabelFase.Text = resposta.results.moon_phase;
+		LabelHora.Text = resposta.results.time;
 
-		int Temp = 31;
-		string Description = "Tempo nublado";
-		int Rain = 11;
-		int Humidity = 25;
-		int Sunrise = 0620;
-		int Sunset = 1850;
-		int Cloudness = 30;
-		int WindSpeedy = 5;
-		string WindCardinal = "NE";
-		string MoonPhase = "Minguante";
+		int temp = 31;
+		string description = "Tempo nublado";
+		int rain = 11;
+		int humidity = 25;
+		int sunrise = 0620;
+		int sunset = 1850;
+		int cloudiness = 30;
+		int wind_speedy = 5;
+		string wind_cardinal = "NE";
+		string moon_phase = "Minguante";
+		string time = "00:00";
 
-		if(resultado.Currently == "dia"){
-			if(resultado.Rain > 10)
+		if(resposta.results.currently == "dia"){
+			if(resposta.results.rain > 10)
 			TelaDeFundo.Source = "dia_chuvoso.png";
 		
-		else if(resultado.Cloudness > 20)
+		else if(resposta.results.cloudiness > 20)
 			TelaDeFundo.Source = "dia_nublado.png";
 
 		else
@@ -87,10 +73,10 @@ public partial class MainPage : ContentPage
 		
 		else {
 			
-			if(resultado.Rain > 10)
+			if(resposta.results.rain > 10)
 			TelaDeFundo.Source = "noite_chuvosa.png";
 		
-			else if(resultado.Cloudness > 20)
+			else if(resposta.results.cloudiness > 20)
 				TelaDeFundo.Source = "noite_nublada.png";
 
 			else

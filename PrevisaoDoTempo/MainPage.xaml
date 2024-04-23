@@ -25,6 +25,16 @@
             
 <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 
+                     <Label x:Name="LabelHora"
+                            FontSize="30"
+                            TextColor="Black"
+                            FontFamily="Chatlong.ttf"
+                            Grid.Row="0"
+                            Grid.Column="0"
+                            Grid.ColumnSpan="3"/>
+
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+                     
                      <Frame x:Name="um"
                            BackgroundColor="#77ffe7c2"
                            BorderColor="Transparent"

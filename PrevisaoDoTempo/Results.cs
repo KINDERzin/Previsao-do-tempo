@@ -5,22 +5,21 @@ public partial class Results
 
     
 
-    public int Temp {get; set;} // Temperatura
-    public int Sunrise {get; set;} // Amanhecer
-    public int Sunset {get; set;} //Anoitecer
-    public int Date {get; set;} // Data
-    public int Time {get; set;} // Hora
-    public string Description {get; set;} // Descrição do tempo
-    public string Currently {get; set;} // Dia ou Noite
-    public string City {get; set;} // Cidade
-    public int Humidity {get; set;} // Humidade
-    public double Cloudness {get; set;} // Nublado
-    public double Rain {get; set;} // Chuva
-    public double WindSpeedy {get; set;} // Velocidade do vento
-    public string WindCardinal {get; set;} // Direção do vento
-    public int Condition_code {get; set;} //
-    public string MoonPhase {get; set;} // Fase da lua
-    public int Image_id {get; set;} // Id da imagem
+    public int temp {get; set;} // Temperatura
+    public int sunrise {get; set;} // Amanhecer
+    public int sunset {get; set;} //Anoitecer
+    public string date {get; set;} // Data
+    public string time {get; set;} // Hora
+    public string description {get; set;} // Descrição do tempo
+    public string currently {get; set;} // Dia ou Noite
+    public string city {get; set;} // Cidade
+    public int humidity {get; set;} // Humidade
+    public double cloudiness {get; set;} // Nublado
+    public double rain {get; set;} // Chuva
+    public double wind_speedy {get; set;} // Velocidade do vento
+    public string wind_cardinal {get; set;} // Direção do vento
+    public string moon_phase {get; set;} // Fase da lua
+    public int image_id {get; set;} // Id da imagem
 
 	public Results()
 	{
