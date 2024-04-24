@@ -1,6 +1,4 @@
-﻿
-using System.Diagnostics.Tracing;
-using System.Text.Json;
+﻿using System.Text.Json;
 
 namespace PrevisaoDoTempo;
 
@@ -8,13 +6,10 @@ public partial class MainPage : ContentPage
 {
 	Resposta resposta;
 	const string URL = "https://api.hgbrasil.com/weather?woeid&key=eeb4ae8c";
-	public MainPage()
-	{
-		InitializeComponent();
 	
-		
+	public MainPage(){
+		InitializeComponent();
 		AtualizaTempo();
-		
 	}
 
 	async void AtualizaTempo(){
@@ -37,28 +32,34 @@ public partial class MainPage : ContentPage
 	
 
 	void PreencherTela(){
-		LabelTemperatura.Text = Convert.ToString(resposta.results.temp + "ºC");
+		LabelTemperatura.Text = resposta.results.temp + "ºC".ToString();
+		LabelHumidade.Text = resposta.results.humidity.ToString();
+		LabelAmanhecer.Text = resposta.results.sunrise.ToString();
+		LabelAnoitecer.Text = resposta.results.sunset.ToString();
+		LabelForca.Text = resposta.results.wind_speedy.ToString();
+		LabelChuva.Text = resposta.results.rain.ToString();
+		
 		LabelTempo.Text = resposta.results.description;
-		LabelChuva.Text = Convert.ToString(resposta.results.rain);
-		LabelHumidade.Text = Convert.ToString(resposta.results.humidity);
-		LabelAmanhecer.Text = Convert.ToString(resposta.results.sunrise);
-		LabelAnoitecer.Text = Convert.ToString(resposta.results.sunset);
-		LabelForca.Text = Convert.ToString(resposta.results.wind_speedy);
 		LabelDirecao.Text = resposta.results.wind_cardinal;
 		LabelFase.Text = resposta.results.moon_phase;
 		LabelHora.Text = resposta.results.time;
 
 		int temp = 31;
-		string description = "Tempo nublado";
-		int rain = 11;
-		int humidity = 25;
 		int sunrise = 0620;
 		int sunset = 1850;
-		int cloudiness = 30;
-		int wind_speedy = 5;
+		int humidity = 25;
+
+		string date = "11/11/2005";
+		string time = "00:00";
+		string description = "Tempo nublado";
+		string currently = "dia";
+		string city = "Apucarana";
 		string wind_cardinal = "NE";
 		string moon_phase = "Minguante";
-		string time = "00:00";
+
+		double cloudiness = 30;
+		double rain = 11;	
+		double wind_speedy = 5;
 
 		if(resposta.results.currently == "dia"){
 			if(resposta.results.rain > 10)
