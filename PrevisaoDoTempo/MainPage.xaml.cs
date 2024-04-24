@@ -24,7 +24,7 @@ public partial class MainPage : ContentPage
 		}
 
 		catch(Exception e){
-			//ERRO
+			System.Diagnostics.Debug.WriteLine(e);
 		}
 
 		PreencherTela();
@@ -34,8 +34,7 @@ public partial class MainPage : ContentPage
 	void PreencherTela(){
 		LabelTemperatura.Text = resposta.results.temp + "ºC".ToString();
 		LabelHumidade.Text = resposta.results.humidity.ToString();
-		LabelAmanhecer.Text = resposta.results.sunrise.ToString();
-		LabelAnoitecer.Text = resposta.results.sunset.ToString();
+		
 		LabelForca.Text = resposta.results.wind_speedy.ToString();
 		LabelChuva.Text = resposta.results.rain.ToString();
 		
@@ -43,6 +42,8 @@ public partial class MainPage : ContentPage
 		LabelDirecao.Text = resposta.results.wind_cardinal;
 		LabelFase.Text = resposta.results.moon_phase;
 		LabelHora.Text = resposta.results.time;
+		LabelAmanhecer.Text = resposta.results.sunrise;
+		LabelAnoitecer.Text = resposta.results.sunset;
 
 		int temp = 31;
 		int sunrise = 0620;
@@ -65,11 +66,11 @@ public partial class MainPage : ContentPage
 			if(resposta.results.rain > 10)
 			TelaDeFundo.Source = "dia_chuvoso.png";
 		
-		else if(resposta.results.cloudiness > 20)
-			TelaDeFundo.Source = "dia_nublado.png";
+			else if(resposta.results.cloudiness > 20)
+				TelaDeFundo.Source = "dia_nublado.png";
 
-		else
-			TelaDeFundo.Source = "dia_claro.png";
+			else
+				TelaDeFundo.Source = "dia_claro.png";
 		}
 		
 		else {
