@@ -41,7 +41,7 @@ public partial class MainPage : ContentPage
 		LabelTempo.Text = resposta.results.description;
 		LabelDirecao.Text = resposta.results.wind_cardinal;
 		LabelFase.Text = resposta.results.moon_phase;
-		LabelHora.Text = resposta.results.time;
+		LabelHora.Text = "Leitura feita as " + resposta.results.time;
 		LabelAmanhecer.Text = resposta.results.sunrise;
 		LabelAnoitecer.Text = resposta.results.sunset;
 

@@ -2,11 +2,7 @@ namespace PrevisaoDoTempo;
 
 public partial class Results
 {
-
-    
-
     public int temp {get; set;} // Temperatura
-    
     public int humidity {get; set;} // Humidade
     
     public string date {get; set;} // Data
@@ -19,13 +15,10 @@ public partial class Results
     public string wind_speedy {get; set;} // Velocidade do vento  
     public string sunrise {get; set;} // Amanhecer
     public string sunset {get; set;} //Anoitecer
+    public string condition_slug {get; set;}
 
     public double cloudiness {get; set;} // Nublado
     public double rain {get; set;} // Chuva
-      
 
-	public Results()
-	{
-		
-	}
+    public List<Forecast> forecast {get; set;}
 }
