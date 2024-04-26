@@ -6,4 +6,5 @@ public partial class Forecast
     public string weekday {get; set;}
     public double max {get; set;}
     public double min {get; set;}
+    public string condition {get; set;} 
 }

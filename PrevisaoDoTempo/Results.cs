@@ -16,6 +16,7 @@ public partial class Results
     public string sunrise {get; set;} // Amanhecer
     public string sunset {get; set;} //Anoitecer
     public string condition_slug {get; set;}
+    public string condition {get; set;} 
 
     public double cloudiness {get; set;} // Nublado
     public double rain {get; set;} // Chuva

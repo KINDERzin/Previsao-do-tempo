@@ -28,7 +28,7 @@
                      <Label x:Name="LabelHora"
                             FontSize="30"
                             TextColor="Black"
-                            FontFamily="Chatlong.ttf"
+                            FontFamily="Chatlong"
                             Margin="5"
                             Grid.Row="0"
                             Grid.Column="0"
@@ -49,7 +49,7 @@
                             <VerticalStackLayout>
 
                                    <Label x:Name="LabelTemperatura"
-                                          FontFamily="Chatlong.ttf"
+                                          FontFamily="Chatlong"
                                           TextColor="Black"
                                           FontSize="45"
                                           Margin="5,20"
@@ -57,13 +57,13 @@
 
                                    <Label x:Name="LabelTempo"
                                           TextColor="Black"
-                                          FontFamily="Bond-story.ttf"
+                                          FontFamily="Bond-story"
                                           FontSize="13"
                                           Margin="5"
                                           HorizontalTextAlignment="Center"/>
 
                                    <Label Text="Apucarana, PR"
-                                          FontFamily="Bond-story.ttf"
+                                          FontFamily="Bond-story"
                                           TextColor="Black"
                                           Margin="5,20"
                                           x:Name="LabelCidade"
@@ -94,7 +94,7 @@
 
                                    <Label Text="Chuva:"
                                           TextColor="Black"
-                                          FontFamily="Bond-story.ttf"
+                                          FontFamily="Bond-story"
                                           FontSize="15"
                                           Grid.Row="0"
                                           Grid.Column="0"
@@ -102,7 +102,7 @@
                                    
                                    <Label TextColor="Black"
                                           FontSize="15"
-                                          FontFamily="Bond-story.ttf"
+                                          FontFamily="Bond-story"
                                           x:Name="LabelChuva"
                                           Grid.Row="0"
                                           Grid.Column="1"
@@ -110,7 +110,7 @@
 
                                    <Label Text="Humidade:"
                                           TextColor="Black"
-                                          FontFamily="Bond-story.ttf"
+                                          FontFamily="Bond-story"
                                           FontSize="15"
                                           Grid.Row="1"
                                           Grid.Column="0"
@@ -118,7 +118,7 @@
 
                                    <Label TextColor="Black"
                                           FontSize="15"
-                                          FontFamily="Bond-story.ttf"
+                                          FontFamily="Bond-story"
                                           x:Name="LabelHumidade"
                                           Grid.Row="1"
                                           Grid.Column="1"
@@ -148,7 +148,7 @@
 
                                    <Label Text="Sol"
                                           TextColor="Black"
-                                          FontFamily="Chatlong.ttf"
+                                          FontFamily="Chatlong"
                                           FontSize="19"
                                           Margin="30, 5"
                                           HorizontalTextAlignment="Center"
@@ -158,7 +158,7 @@
                                    
                                    <Label Text="Amanhecer:"
                                           TextColor="Black"
-                                          FontFamily="Bond-story.ttf"
+                                          FontFamily="Bond-story"
                                           FontSize="14"
                                           Grid.Row="1"
                                           Grid.Column="0"
@@ -166,7 +166,7 @@
 
                                    <Label TextColor="Black"
                                           x:Name="LabelAmanhecer"
-                                          FontFamily="Bond-story.ttf"
+                                          FontFamily="Bond-story"
                                           FontSize="14"
                                           Grid.Row="1"
                                           Grid.Column="1"
@@ -174,7 +174,7 @@
 
                                    <Label Text="Anoitecer:"
                                           TextColor="Black"
-                                          FontFamily="Bond-story.ttf"
+                                          FontFamily="Bond-story"
                                           FontSize="14"
                                           Grid.Row="2"
                                           Grid.Column="0"
@@ -182,7 +182,7 @@
 
                                    <Label TextColor="Black"
                                           x:Name="LabelAnoitecer"
-                                          FontFamily="Bond-story.ttf"
+                                          FontFamily="Bond-story"
                                           FontSize="14"
                                           Grid.Row="2"
                                           Grid.Column="1"
@@ -212,7 +212,7 @@
 
                                    <Label Text="Vento"
                                           TextColor="Black"
-                                          FontFamily="Chatlong.ttf"
+                                          FontFamily="Chatlong"
                                           FontSize="19"
                                           Margin="15, 5"
                                           HorizontalTextAlignment="Center"
@@ -222,7 +222,7 @@
                                    
                                    <Label Text="Força:"
                                           TextColor="Black"
-                                          FontFamily="Bond-story.ttf"
+                                          FontFamily="Bond-story"
                                           FontSize="14"
                                           Margin="20, 0, 0, 0"
                                           Grid.Row="1"
@@ -231,7 +231,7 @@
                                    <Label TextColor="Black"
                                           x:Name="LabelForca"
                                           FontSize="14"
-                                          FontFamily="Bond-story.ttf"
+                                          FontFamily="Bond-story"
                                           Margin="0"
                                           Grid.Row="1"
                                           Grid.Column="1"/>
@@ -239,14 +239,14 @@
                                    <Label Text="Direção:"
                                           TextColor="Black"
                                           FontSize="14"
-                                          FontFamily="Bond-story.ttf"
+                                          FontFamily="Bond-story"
                                           Margin="20, 0, 0, 10"
                                           Grid.Row="2"
                                           Grid.Column="0"/>
 
                                    <Label TextColor="Black"
                                           x:Name="LabelDirecao"
-                                          FontFamily="Bond-story.ttf"
+                                          FontFamily="Bond-story"
                                           FontSize="14"
                                           Margin="0, 0, 20, 10"
                                           Grid.Row="2"
@@ -275,7 +275,7 @@
                                    
                                    <Label Text="Lua"
                                           TextColor="Black"
-                                          FontFamily="Chatlong.ttf"
+                                          FontFamily="Chatlong"
                                           FontSize="19"
                                           Margin="0, 5"
                                           HorizontalTextAlignment="Center"  
@@ -311,8 +311,12 @@
                             Grid.ColumnSpan="3"
                             Grid.RowSpan="4"
                             Padding="0"
-                            Margin="20">
-                            <CollectionView>
+                            Margin="20, 0">
+
+                            <CollectionView x:Name="listaForecast"
+                                            Margin="0"
+                                            HorizontalOptions="Fill"
+                                            VerticalOptions="Fill">
                                    <CollectionView.ItemsLayout>
                                           <LinearItemsLayout Orientation="Horizontal"
                                                              ItemSpacing="10"/>  
@@ -321,8 +325,10 @@
                                           <DataTemplate>
                                                  <Frame BackgroundColor="#FFF"
                                                         BorderColor="#FFF"
+                                                        VerticalOptions="Fill"
                                                         CornerRadius="20">
-                                                        <Grid>
+                                                        <Grid VerticalOptions="Center"
+                                                              HorizontalOptions="Center">
                                                                <Grid.RowDefinitions>
                                                                       <RowDefinition Height="15"/>
                                                                       <RowDefinition Height="20"/>
@@ -331,23 +337,25 @@
                                                                       <RowDefinition Height="*"/>
                                                                </Grid.RowDefinitions>
                                                                <Grid.ColumnDefinitions>
-                                                                      <ColumnDefinition Width="*"/>
+                                                                      <ColumnDefinition Width="30"/>
                                                                       <ColumnDefinition Width="*"/>
                                                                </Grid.ColumnDefinitions>
 
                                                                <Label Text="{Binding date}"
                                                                       FontSize="12"
                                                                       TextColor="#000"
-                                                                      HorizontalOptions="Center"
+                                                                      HorizontalTextAlignment="Center"
                                                                       Grid.Row="0"
-                                                                      Grid.Column="1"/>
+                                                                      Grid.Column="0"
+                                                                      Grid.ColumnSpan="2"/>
 
                                                                <Label Text="{Binding weekday}"
                                                                       FontSize="12"
                                                                       TextColor="#000"
                                                                       HorizontalOptions="Center"
                                                                       Grid.Row="1"
-                                                                      Grid.Column="1"/>
+                                                                      Grid.Column="0"
+                                                                      Grid.ColumnSpan="2"/>
                                                                
                                                                <Label Text="Min:"
                                                                       FontSize="12"
@@ -360,31 +368,33 @@
                                                                       FontSize="12"
                                                                       TextColor="#000"
                                                                       HorizontalOptions="Center"
-                                                                      Grid.Row="3"
+                                                                      Grid.Row="2"
                                                                       Grid.Column="1"/>    
 
                                                                <Label Text="Max:"
                                                                       FontSize="12"
                                                                       TextColor="#000"
                                                                       HorizontalOptions="Center"
-                                                                      Grid.Row="4"
+                                                                      Grid.Row="3"
                                                                       Grid.Column="0"/> 
 
                                                                <Label Text="{Binding max}"
                                                                       FontSize="12"
                                                                       TextColor="#000"
                                                                       HorizontalOptions="Center"
-                                                                      Grid.Row="4"
+                                                                      Grid.Row="3"
                                                                       Grid.Column="1"/>
 
-                                                               <Image Source="{Binding condition_slug}"/>
+                                                               <Image Source="{Binding condition}"
+                                                                      Grid.Row="4"
+                                                                      Grid.Column="0"
+                                                                      Grid.ColumnSpan="2"/>
                                                         </Grid>
                                                  </Frame>
                                           </DataTemplate>
                                    </CollectionView.ItemTemplate>
                             </CollectionView>
                      </Frame>
-
        </Grid>
 
 </ContentPage>
