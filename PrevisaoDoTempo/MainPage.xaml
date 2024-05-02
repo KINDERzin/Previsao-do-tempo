@@ -385,7 +385,9 @@
                                                                       Grid.Row="3"
                                                                       Grid.Column="1"/>
 
-                                                               <Image Source="{Binding condition}"
+                                                               <Image Source="{Binding condition, StringFormat='{0}.png'}"
+                                                                      HeightRequest="50"
+                                                                      WidthRequest="50"
                                                                       Grid.Row="4"
                                                                       Grid.Column="0"
                                                                       Grid.ColumnSpan="2"/>
